@@ -3,7 +3,10 @@ package org.example.inventoryapi.model;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.inventoryapi.util.JsonConvert;
+
 import java.time.LocalDateTime;
+import java.util.Map;
 
 @Data
 @NoArgsConstructor
@@ -20,9 +23,8 @@ public class Stock {
 
     private String serialNumber;
 
-    @Lob
-    @Column(columnDefinition = "jsonb")
-    private String additionalInfo;
+    @Convert(converter = JsonConvert.class)
+    private Map<String, Object> additionalInfo;
 
     @Lob
     private byte[] image;

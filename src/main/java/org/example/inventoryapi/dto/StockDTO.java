@@ -19,3 +19,4 @@ public class StockDTO {
     private String createdBy;
     private String updatedBy;
 }
+

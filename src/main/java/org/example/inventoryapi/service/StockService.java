@@ -20,7 +20,7 @@ public class StockService {
         stock.setName(stockDTO.getNamaBarang());
         stock.setQuantity(stockDTO.getJumlahStok());
         stock.setSerialNumber(stockDTO.getNomorSeri());
-        stock.setAdditionalInfo(stockDTO.getAdditionalInfo().toString());
+        stock.setAdditionalInfo(stockDTO.getAdditionalInfo());
         stock.setImage(stockDTO.getGambarPath().getBytes());
         stock.setCreatedAt(LocalDateTime.now());
         stock.setCreatedBy(stockDTO.getCreatedBy());
@@ -35,3 +35,5 @@ public class StockService {
         return stockRepository.findById(id);
     }
 }
+
+
