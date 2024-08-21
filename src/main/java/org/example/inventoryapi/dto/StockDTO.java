@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 
 import java.util.Map;
 
-// StockDTO.java
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,8 +14,8 @@ public class StockDTO {
     private String namaBarang;
     private Integer jumlahStok;
     private String nomorSeri;
-    private Map<String, Object> additionalInfo; // Dinamis JSON structure
-    private String gambarPath; // Path untuk gambar yang disimpan
+    private Map<String, Object> additionalInfo;
+    private String gambarPath;
     private String createdBy;
     private String updatedBy;
 }
